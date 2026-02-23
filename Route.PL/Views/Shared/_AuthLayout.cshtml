@@ -1,21 +1,25 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>@ViewData["Title"]</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- Custom Theme files -->
-	<link href="/css/AuthStyle.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- //Custom Theme files -->
-	<!-- web font -->
-	<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-	<!-- //web font -->
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Isolated Auth UI (do not include Bootstrap here to avoid style conflicts) -->
+    <link href="~/css/AuthStyle.css" rel="stylesheet" asp-append-version="true" />
+
+    @RenderSection("Styles", required: false)
 </head>
 <body>
-	@RenderBody()
-	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<partial name="_ValidationScriptsPartial">
+    <main class="auth-page">
+        @RenderBody()
+    </main>
+
+    <partial name="_ValidationScriptsPartial" />
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

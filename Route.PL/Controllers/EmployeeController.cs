@@ -14,6 +14,7 @@ namespace Route.PL.Controllers
             return View(employees);
         }
         #endregion
+
         #region Details
         public IActionResult Details(int id)
         {
@@ -21,6 +22,7 @@ namespace Route.PL.Controllers
             return View(employee);
         }
         #endregion
+
         #region Create
         [HttpGet]
         public IActionResult Create()
@@ -45,6 +47,7 @@ namespace Route.PL.Controllers
             return RedirectToAction(nameof(Index));
         }
         #endregion
+
         #region Edit
         [HttpGet]
         public IActionResult Edit(int id)
@@ -72,6 +75,7 @@ namespace Route.PL.Controllers
             return RedirectToAction(nameof(Index));
         }
         #endregion
+
         #region Delete
         [HttpPost]
         public IActionResult Delete(int id)
